@@ -462,6 +462,9 @@ nextRpc = (sessionContext) ->
       when 'factoryReset'
         session.addProvisions(sessionContext, "task_#{task._id}",
           [['reset']])
+      when 'getTree'
+        session.addProvisions(sessionContext, "task_#{task._id}",
+          [['get']])
       when 'compareTree'
         session.addProvisions(sessionContext, "task_#{task._id}",
           [['compare']])
