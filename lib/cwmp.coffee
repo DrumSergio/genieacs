@@ -462,6 +462,9 @@ nextRpc = (sessionContext) ->
       when 'factoryReset'
         session.addProvisions(sessionContext, "task_#{task._id}",
           [['reset']])
+      when 'compareTree'
+        session.addProvisions(sessionContext, "task_#{task._id}",
+          [['compare']])
       when 'download'
         session.addProvisions(sessionContext, "task_#{task._id}",
           [['download', task.fileType, task.fileName, task.targetFileName]])
